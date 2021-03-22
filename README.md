@@ -24,3 +24,7 @@ Having said that, it's still better than no 2FA at all.
 ### Release
 
 `npm run release` — builds and packages the app into a macOS .app bundle
+
+---
+
+##### Licensed under GPL v3

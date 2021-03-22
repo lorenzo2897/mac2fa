@@ -11,7 +11,7 @@
     "release": "npm run clean && npm run build && npm run package"
   },
   "author": "Lorenzo Silvestri",
-  "license": "UNLICENSED",
+  "license": "GPLV3",
   "dependencies": {
     "electron-store": "^7.0.2",
     "node-mac-auth": "^1.0.0",
