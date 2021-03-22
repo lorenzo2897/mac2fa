@@ -33,7 +33,7 @@ export class OtpGenerator {
   }
 
   lock(): void {
-    this.services = [];
+    this.services = null;
   }
 
   isUnlocked(): boolean {
@@ -41,6 +41,12 @@ export class OtpGenerator {
   }
 
   listServices(): ServiceInformation[] {
+    // return [
+    //   {label: "root@1234567890", issuer: "AWS", thumbnail: ""},
+    //   {label: "user.name1", issuer: "Facebook", thumbnail: ""},
+    //   {label: "example@gmail.com", issuer: "Google", thumbnail: ""},
+    //   {label: "example@gmail.com", issuer: "Amazon", thumbnail: ""},
+    // ];
     return this.services.map(s => ({
       issuer: s.issuer,
       label: s.label,
