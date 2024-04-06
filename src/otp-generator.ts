@@ -1,6 +1,6 @@
 import {SecretsFileProvider} from "./secrets-file-provider";
 import { decrypt } from "./decrypt";
-import totp from "totp-generator";
+import { TOTP } from "totp-generator";
 
 export interface ServiceInformation {
   issuer: string;
@@ -60,13 +60,13 @@ export class OtpGenerator {
       throw new Error("Service not found");
     }
 
-    const otp = totp(service.secret, {
+    const otp = TOTP.generate(service.secret, {
       digits: service.digits,
-      algorithm: this.translateHashAlgorithm(service.algorithm),
+      algorithm: this.translateHashAlgorithm(service.algorithm) as any,
       period: service.period
     });
     return {
-      otp,
+      otp: otp.otp,
       remainingMs: this.expiresIn(service)
     };
   }

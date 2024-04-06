@@ -13,14 +13,14 @@
   "author": "Lorenzo Silvestri",
   "license": "GPLV3",
   "dependencies": {
-    "electron-store": "^7.0.2",
+    "electron-store": "^8.2.0",
     "node-mac-auth": "^1.0.0",
-    "read": "^1.0.7",
-    "totp-generator": "^0.0.9"
+    "read": "^3.0.1",
+    "totp-generator": "^1.0.0"
   },
   "devDependencies": {
-    "electron": "^12.0.1",
-    "electron-builder": "^22.10.5",
+    "electron": "^29.2.0",
+    "electron-builder": "^24.13.3",
     "typescript": "^4.2.3"
   },
   "build": {
