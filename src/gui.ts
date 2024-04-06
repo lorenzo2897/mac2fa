@@ -14,7 +14,7 @@ export class GUI {
   }
 
   init() {
-    this.tray = new Tray(path.join(__dirname, "../assets/tray-icon/tray.png"));
+    this.tray = new Tray(path.join(__dirname, "../assets/tray-icon/trayTemplate.png"));
     this.tray.setToolTip("mac2FA");
     this.buildMenu();
   }
